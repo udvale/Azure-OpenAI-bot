@@ -1,9 +1,9 @@
 const { OpenAIClient, AzureKeyCredential } = require("@azure/openai");
 
 const client = new OpenAIClient(
-    "<azure-openai-service-endpoint",
-    new AzureKeyCredential("<azure-openai-service-key>")
-    );
+  "https://udvale-openai.openai.azure.com/",
+  new AzureKeyCredential("c9c7094d18a6487aba714e8d8e756338")
+);
 
 const chatResponse = client.getChatCompletions(
     "completions", // deployment name

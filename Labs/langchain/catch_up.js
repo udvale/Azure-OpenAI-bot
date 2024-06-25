@@ -6,6 +6,10 @@ const { OpenAIClient, AzureKeyCredential} = require("@azure/openai");
 const dbClient = new MongoClient(process.env.AZURE_COSMOSDB_CONNECTION_STRING);
 // set up the Azure OpenAI client 
 const embeddingsDeploymentName = "embeddings";
+// const aoaiClient = new OpenAIClient(
+//     "https://udvale-openai.openai.azure.com/",
+//     new AzureKeyCredential("c9c7094d18a6487aba714e8d8e756338")
+//   );
 const aoaiClient = new OpenAIClient("https://" + process.env.AZURE_OPENAI_API_INSTANCE_NAME + ".openai.azure.com/", 
                     new AzureKeyCredential(process.env.AZURE_OPENAI_API_KEY));
 
